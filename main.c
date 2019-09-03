@@ -1,84 +1,57 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
 int main()
 {
-    char opcion;
-    do
-    {
-        printf("1. ALTA Cliente\n");
-        printf("2. BAJA Cliente\n");
-        printf("3. MODIFICAR Cliente\n");
-        printf("4. MOSTRAR Clientes\n");
-        printf("5. SALIR\n");
-        printf("Elija una opcion: ");
-        fflush(stdin);
-        scanf("%c", &opcion);
-        switch(opcion)
-        {
-            case '1':
-                printf("Estoy dando de alta!!!\n");
-                break;
-            case '2':
-                printf("Estoy dando de baja!!!\n");
-                break;
-            case '3':
-                printf("Estoy modificando!!!\n");
-                break;
-            case '4':
-                printf("Estoy mostrando!!!\n");
-                break;
-            case '5':
-                printf("Estoy saliendo!!!\n");
-            default:
-                printf("Opcion incorrecta!!!\n");
+    int vectorDeNumeros[10]={7,-5,5,-6,-1,-4,10,5,4,-1};
+    int i;
+    int contadorDePositivos = 0;
+    int sumaDePositivos = 0;
+    float promedioPositivos;
+    int maximo;
+    int minimo;
 
-        }
-    system("pause");
-    system("cls");
+    /*
+    printf("\tCARGA DE DATOS\n");
+    for(i=0; i<10; i++)
+    {
+        printf("Ingrese un numero: ");
+        scanf("%d", &vectorDeNumeros[i]);
+    }*/
+
+    printf("\tMUESTRO EL VECTOR\n");
+    for(i=0; i<10; i++)
+    {
+        printf("%d\n", vectorDeNumeros[i]);
     }
-    while(opcion!='5');
+    printf("\n\n\tMUESTRO SOLO LOS NEGATIVOS\n");
+    for(i=0; i<10; i++)
+    {
+        if(vectorDeNumeros[i]<0)
+        {
+           printf("%d\n", vectorDeNumeros[i]);
+        }
+
+    }
+
+    for(i=0; i<10; i++)
+    {
+        if(vectorDeNumeros[i]>=0)
+        {
+            sumaDePositivos += vectorDeNumeros[i];
+            contadorDePositivos++;
+        }
+    }
+    promedioPositivos = (float)sumaDePositivos/contadorDePositivos;
+
+    printf("Suma: %d -- Cantidad %d\n\n", sumaDePositivos, contadorDePositivos);
+
+
+     printf("\n\n\PROMEDIO DE POSITIVOS: %f\n\n", promedioPositivos);
+
+
+     printf("MAXIMO: %d -- MINIMO: %d", maximo, minimo);
+
 
     return 0;
-}
-*/ //Ejemplo de menu//
-
-
-
-int sumaNumeros (int , int );
-int main()
-{
-
-
-
-
-    {
-
-    int num1;
-    int num2;
-    int suma;
-    int total;
-
-    printf("ingrese numero a sumar: ");
-    scanf("%d",& num1);
-
-    printf("ingrese numero a sumar: ");
-    scanf("%d",&num2);
-
-    total =suma(num1,num2);
-
-    printf("La suma es %d",total);
-
-
-    }
-
-
-    int total (int num1, int num2);
-
-        {
-            int suma;
-            suma = num1 + num2;
-            return suma;
-        }
 }
